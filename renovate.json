@@ -3,12 +3,13 @@
   "docker": {
     "enabled": true
   },
-  "packageRules": [
-    {
-      "datasources": ["docker"],
-      "updateTypes": ["minor", "patch"],
-      "packageNames": ["ubuntu"],
-      "automerge": false
-    }
-  ]
+  "dockerfile": {
+    "packageRules": [
+      {
+        "matchDatasources": ["docker"],
+        "matchPackageNames": ["ubuntu"],
+        "allowedVersions": "jammy-*"
+      }
+    ]
+  }
 }
