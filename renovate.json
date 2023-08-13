@@ -1,7 +1,14 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":dependencyDashboard"],
-  "dockerfile": {
+  "extends": ["config:base"],
+  "docker": {
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "datasources": ["docker"],
+      "updateTypes": ["minor", "patch"],
+      "packageNames": ["ubuntu"],
+      "automerge": false
+    }
+  ]
 }
