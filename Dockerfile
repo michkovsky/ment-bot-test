@@ -1,2 +1,2 @@
-FROM mcr.microsoft.com/dotnet/runtime:6.0.21-jammy
+FROM mcr.microsoft.com/dotnet/runtime:7.0.10-jammy
 # can somebody suggested update
